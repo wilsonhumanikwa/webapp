@@ -61,7 +61,8 @@ data "aws_ssm_parameter" "webserver-ami" {
 #Create key-pair for logging into EC2 in us-east-1
 resource "aws_key_pair" "webserver-key" {
   key_name   = "webserver-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  #public_key = file("~/.ssh/id_rsa.pub")
+  public_key = file("/home/wilsonawsacc/.ssh/id_rsa.pub")
 }
 
 #Create SG for allowing TCP/80 & TCP/22
