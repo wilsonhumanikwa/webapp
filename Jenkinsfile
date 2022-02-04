@@ -9,8 +9,8 @@ pipeline {
         }
         stage ("initialise Terraform") {
             steps {
-#                sh 'terraform init -reconfigure'
-                 sh 'echo Hello World 2022'
+                sh 'terraform init -reconfigure'
+                 sh 'echo Hello World 2022 again'
             }
         }
         stage ("format terraform") {
