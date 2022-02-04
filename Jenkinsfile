@@ -9,12 +9,12 @@ pipeline {
         }
         stage ("initialise Terraform") {
             steps {
-                sh ('terraform init -reconfigure') 
+                sh 'terraform init -reconfigure'
             }
         }
         stage ("format terraform") {
             steps {
-                sh ('terraform fmt') 
+                sh 'terraform fmt' 
             }
         }        
         stage ("validate Terraform") {
