@@ -20,19 +20,19 @@ pipeline {
         }        
         stage ("validate Terraform") {
             steps {
-                sh ('terraform validate') 
+                sh 'terraform validate' 
             }
         }
         stage ("Preflight Check") {
             steps {
-                sh ('terraform plan') 
+                sh 'terraform plan' 
             }
         }
                 
         stage ("Deploy WebApp") {
             steps {
                 echo "Applying Terraform Configuration"
-                sh ('terraform apply --auto-approve') 
+                sh 'terraform apply --auto-approve' 
            }
         }
     }
