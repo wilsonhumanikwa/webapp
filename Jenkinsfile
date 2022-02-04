@@ -9,8 +9,7 @@ pipeline {
         }
         stage ("initialise Terraform") {
             steps {
-                sh 'terraform init -reconfigure'
-                 sh 'echo Hello World 2022 again'
+                sh 'terraform init'
             }
         }
         stage ("format terraform") {
@@ -20,8 +19,6 @@ pipeline {
         }        
         stage ("validate Terraform") {
             steps {
-                sh 'whoami' 
-                sh 'pwd'
                 sh 'terraform validate'
             }
         }
