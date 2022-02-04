@@ -20,7 +20,9 @@ pipeline {
         }        
         stage ("validate Terraform") {
             steps {
-                sh 'terraform validate' 
+                sh 'whoami' 
+                sh 'pwd'
+                sh 'terraform validate'
             }
         }
         stage ("Preflight Check") {
