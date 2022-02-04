@@ -62,7 +62,7 @@ data "aws_ssm_parameter" "webserver-ami" {
 resource "aws_key_pair" "webserver-key" {
   key_name   = "webserver-key"
   #public_key = file("~/.ssh/id_rsa.pub")
-  public_key = file("/home/wilsonawsacc/.ssh/id_rsa.pub")
+  public_key = file("id_rsa.pub")
 }
 
 #Create SG for allowing TCP/80 & TCP/22
